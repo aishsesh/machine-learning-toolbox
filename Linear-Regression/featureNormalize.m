@@ -11,12 +11,11 @@ sigma = zeros(1, size(X, 2));
 
 
 dim = columns(X);
+% computing mean and standard deviation for each column and normalizing 
 for i = 1:dim,
-	% computing mean for ith column
+	
 	mu(1, i) = mean(X(:,i));
-	% computing standard deviation for ith column
 	sigma(1, i) = std(X(:,i));
-	%normalizing
 	X_norm(:,i) = (X(:,i) - mu(1,i))/ sigma(1,i);
 end;
 
