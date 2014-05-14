@@ -12,7 +12,7 @@ X = [ones(m, 1) X];
 
 H = sigmoid(X*transpose(all_theta));
 
-% retrieving the index of max element from each row and storing in p
+% retrieving the index of max element from each row and storing in p; p contains the selected labels 
 
 [val, p] = max(H, [], 2); 
 
