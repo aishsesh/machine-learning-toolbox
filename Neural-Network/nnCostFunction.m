@@ -40,7 +40,7 @@ A2 = [ones(m,1) A2];
 
 Z3 = A2 * transpose(Theta2);
 
-H = sigmoid(Z3);
+H = sigmoid(Z3); %output from our neural network
 
 logH = log(H);
 logOneMinusH = log(1-H);
@@ -60,7 +60,8 @@ J = sumJ/m;
 T1 = (Theta1(:, 2:input_layer_size+1)).^ 2;
 T2 = (Theta2(:, 2:hidden_layer_size+1)).^ 2;
 
-J += (lambda * (sum (T1(:)) + sum(T2(:)) ) /(2*m));
+% adding regularization
+J += (lambda * (sum (T1(:)) + sum(T2(:)) ) /(2*m)); 
 
 
 %---------------Gradient------------------
