@@ -1,0 +1,2 @@
+
+The function cofiCostFunc computes the cost and the gradient for collaborative filtering. It was used to make movie recommendations for a user based on their ratings for some movies and a database of user ratings from 943 users for 1682 movies. Other than cofiCostFunc, the remaining files contain the code for loading the movies and calling the cofiCostFunc and was provided by the instructor.
